@@ -1,0 +1,23 @@
+{
+  "name": "dc-bot",
+  "version": "1.0.0",
+  "description": "Discord Bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RzVallen/Dc-Bot.git"
+  },
+  "author": "RzVallen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RzVallen/Dc-Bot/issues"
+  },
+  "homepage": "https://github.com/RzVallen/Dc-Bot#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "dotenv": "^14.3.2"
+  }
+}
