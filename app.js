@@ -1,7 +1,7 @@
 import { Client, Intents } from 'discord.js';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
-const config = require('./config.json');
+const { TOKEN, PREFIX } = require('./config.json');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 client.on('ready', () => {
@@ -9,12 +9,10 @@ client.on('ready', () => {
   client.user.setActivity('Hello', { type: 'WATCHING' });
 });
 
-client.on('interactionCreate', async (interaction) => {
-  if (!interaction.isCommand()) return;
-
-  if (interaction.commandName === 'ping') {
-    await interaction.reply('Pong!');
+client.on('message', async (msg) => {
+  if (msg.content === 'ping') {
+    msg.channel.send('halo');
   }
 });
 
-client.login(config.TOKEN);
+client.login(TOKEN);
